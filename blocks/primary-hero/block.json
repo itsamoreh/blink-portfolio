@@ -1,0 +1,41 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "bts/primary-hero",
+	"version": "0.1.0",
+	"title": "Primary Hero",
+	"category": "text",
+	"icon": "align-full-width",
+	"attributes": {
+		"title": {
+			"type": "object",
+			"default": {
+				"text": "",
+				"textColor": "",
+				"fontSize": ""
+			}
+		},
+		"body": {
+			"type": "string",
+			"default": ""
+		},
+		"cta": {
+			"type": "object",
+			"default": {
+				"url": "",
+				"text": "Learn More",
+				"show": false
+			}
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": true
+	},
+	"textdomain": "bts",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./primary-hero.php",
+	"viewScript": "file:./view.js"
+}
