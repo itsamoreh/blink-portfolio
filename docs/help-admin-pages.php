@@ -3,7 +3,7 @@
  * Add documentation admin pages.
  * New markdown files in /docs will be automatically added.
  */
-namespace bts\docs;
+namespace bp\docs;
 
 // Include the Parsedown library
 require_once get_template_directory() . '/lib/Parsedown.php';
@@ -17,10 +17,10 @@ function add_admin_page() {
 
 	// Add the top-level documentation page
 	add_menu_page(
-		'BTS Documentation',
+		'bp Documentation',
 		'Theme Help',
 		'edit_posts',
-		'bts-docs-home',
+		'bp-docs-home',
 		function() use ( $docs_dir ) {
 			$index_file = "$docs_dir/_index.md";
 			markdown_to_html( $index_file );
@@ -30,10 +30,10 @@ function add_admin_page() {
 	);
 
 	// Add editor submenu page with rendered documentation
-	add_docs_submenu_page( 'bts-docs-home', $docs_dir . "/editors", 'edit_posts' );
+	add_docs_submenu_page( 'bp-docs-home', $docs_dir . "/editors", 'edit_posts' );
 
 	// Add admin submenu page with rendered documentation
-	add_docs_submenu_page( 'bts-docs-home', $docs_dir . "/admins", 'switch_themes' );
+	add_docs_submenu_page( 'bp-docs-home', $docs_dir . "/admins", 'switch_themes' );
 }
 add_action( 'admin_menu', __NAMESPACE__ . '\\add_admin_page' );
 
@@ -54,7 +54,7 @@ function add_docs_submenu_page( $parent_slug, $subdir, $capability ) {
 		ucwords( str_replace( '-', ' ', $subdir_name ) ),
 		ucwords( str_replace( '-', ' ', $subdir_name ) ),
 		$capability,
-		"bts-docs-$subdir_name",
+		"bp-docs-$subdir_name",
 		function() use ( $subdir ) {
 			$index_file = "$subdir/_index.md";
 			markdown_to_html( $index_file );
@@ -92,6 +92,6 @@ function markdown_to_html( $index_file ) {
  * Enqueue docs admin styles.
  */
 function add_admin_styles() {
-    wp_enqueue_style( 'bts-help-admin-styles', get_template_directory_uri() . '/docs/help-style.css' );
+    wp_enqueue_style( 'bp-help-admin-styles', get_template_directory_uri() . '/docs/help-style.css' );
 }
 add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\\add_admin_styles' );

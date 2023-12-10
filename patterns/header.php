@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Header
- * Slug: bts/header
+ * Slug: bp/header
  * Description: Header with site logo and navigation.
  * Categories: header
  * Block Types: core/template-part/header

@@ -19,16 +19,16 @@ const PrimaryHero = (props) => {
 	const { attributes, setAttributes } = props;
 	const { title, body, cta } = attributes;
 
-	const blockProps = useBlockProps({ className: 'bts-primary-hero' });
+	const blockProps = useBlockProps({ className: 'bp-primary-hero' });
 
 	return (
 		<>
 			<div {...blockProps}>
-				<div className="bts-primary-hero__content">
+				<div className="bp-primary-hero__content">
 					<RichText
-						className="bts-primary-hero__title"
+						className="bp-primary-hero__title"
 						tagName="h2"
-						placeholder={__('Title here …', 'bts')}
+						placeholder={__('Title here …', 'bp')}
 						value={title.text}
 						onChange={(newTitleText) =>
 							setAttributes({
@@ -40,15 +40,15 @@ const PrimaryHero = (props) => {
 						}
 					/>
 					<RichText
-						className="bts-primary-hero__body"
+						className="bp-primary-hero__body"
 						tagName="p"
-						placeholder={__('Body here…', 'bts')}
+						placeholder={__('Body here…', 'bp')}
 						value={body}
 						onChange={(body) => setAttributes({ body })}
 					/>
 					{cta.show && (
 						<RichText
-							className="wp-element-button bts-primary-hero__link"
+							className="wp-element-button bp-primary-hero__link"
 							tagName="a"
 							value={cta.text || ''}
 							onChange={(newCtaText) =>
@@ -67,7 +67,7 @@ const PrimaryHero = (props) => {
 			<InspectorControls>
 				<PanelBody>
 					<ToggleControl
-						label={__('Show CTA', 'bts')}
+						label={__('Show CTA', 'bp')}
 						checked={cta.show}
 						onChange={() =>
 							setAttributes({
@@ -77,12 +77,12 @@ const PrimaryHero = (props) => {
 								},
 							})
 						}
-						help={__('Show the call to action button.', 'bts')}
+						help={__('Show the call to action button.', 'bp')}
 					/>
 					{cta.show && (
 						<URLInput
 							isFullWidth
-							label={__('URL', 'bts')}
+							label={__('URL', 'bp')}
 							value={cta.url || ''}
 							onChange={(newCtaUrl) => {
 								setAttributes({

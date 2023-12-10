@@ -34,9 +34,9 @@ select,
 textarea,
 .wp-block-search__input {
 	background-color: var(--wp--preset--color--white);
-	border: 1px solid var(--wp--preset--color--black);
+	border: 1px solid var(--wp--preset--color--black-900);
 	border-radius: 0;
-	color: var(--wp--preset--color--black);
+	color: var(--wp--preset--color--black-900);
 	font-family: var(--wp--preset--font-family--sans);
 	font-size: var(--wp--preset--font-size--body);
 	padding: 16px 24px;
@@ -65,7 +65,7 @@ textarea {
 }
 
 ::placeholder {
-	color: var(--wp--preset--color--black);
+	color: var(--wp--preset--color--black-900);
 	opacity: 0.5;
 }
 

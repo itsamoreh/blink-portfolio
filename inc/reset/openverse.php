@@ -3,7 +3,7 @@
  * Disable Openverse media integration.
  */
 
-namespace bts;
+namespace bp;
 
 /**
  * Remove Openverse media integration.

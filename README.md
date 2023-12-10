@@ -1,4 +1,4 @@
-# Block Theme Starter
+# Blink Portfolio
 
 ![Theme screenshot](screenshot.png)
 
@@ -11,10 +11,10 @@ This theme is targeted toward agencies or developers building tightly controlled
 themes for clients. To help with control, the following WordPress core features
 have been removed:
 
-- Core block patterns
-- Core block styles
-- Block directory
-- Openverse integration
+-   Core block patterns
+-   Core block styles
+-   Block directory
+-   Openverse integration
 
 If you need custom blocks, build them into the theme. See
 [Custom Blocks](#custom-blocks) for details.

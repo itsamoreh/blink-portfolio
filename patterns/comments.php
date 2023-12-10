@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Default Comments
- * Slug: bts/comments
+ * Slug: bp/comments
  * Description: Comments section and form.
  * Categories: hidden
  * Inserter: false

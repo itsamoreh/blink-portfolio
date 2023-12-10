@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Default Query
- * Slug: bts/query
+ * Slug: bp/query
  * Description: Query of posts in stack view.
  * Categories: hidden
  * Inserter: false

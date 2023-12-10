@@ -1,8 +1,8 @@
-# BTS Editor Help
+# Blink Portfolio Editor Help
 
 ## Getting Started
 
-BTS is a WordPress block theme.
+Blink Portfolio is a WordPress block theme.
 
 Pages and posts, page templates, even the header and footer are all built using blocks and block patterns. This theme includes a number of block patterns and custom blocks that you can use in conjunction with WordPress's core blocks to build your site.
 

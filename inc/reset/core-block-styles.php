@@ -5,7 +5,7 @@
  * Start from scratch for full control of block style options.
  */
 
-namespace bts;
+namespace bp;
 
 /**
  * Reset all core block styles.

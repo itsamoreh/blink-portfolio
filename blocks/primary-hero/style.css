@@ -1,6 +1,6 @@
-.bts-primary-hero {
+.bp-primary-hero {
 	padding: var(--wp--preset--spacing--x-large);
-	border: 2px solid var(--wp--preset--color--black);
+	border: 2px solid var(--wp--preset--color--black-900);
 
 	&__title {
 		margin-top: 0;

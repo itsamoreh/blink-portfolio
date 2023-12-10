@@ -1,4 +1,4 @@
-# BTS Administrator Docs
+# Blink Portfolio Administrator Docs
 
 ## Contents
 

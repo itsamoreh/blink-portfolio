@@ -1,8 +1,8 @@
-# BTS Help
+# Blink Portfolio Help
 
-## [Editor Help](/wp-admin/admin.php?page=bts-docs-editors)
+## [Editor Help](/wp-admin/admin.php?page=bp-docs-editors)
 
-## [Administrator Docs](/wp-admin/admin.php?page=bts-docs-admins) (Admins only)
+## [Administrator Docs](/wp-admin/admin.php?page=bp-docs-admins) (Admins only)
 
 ---
 

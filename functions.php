@@ -2,13 +2,13 @@
 /**
  * This file adds functions to the WordPress theme.
  *
- * @package bts
+ * @package bp
  * @author  Amor Kumar
  * @license GNU General Public License v2 or later
  * @link    https://itsamoreh.dev
  */
 
-namespace bts;
+namespace bp;
 
 if ( ! function_exists( 'setup' ) ) {
 
@@ -21,7 +21,7 @@ if ( ! function_exists( 'setup' ) ) {
 	function setup() {
 
 		// Make theme available for translation.
-		load_theme_textdomain( 'bts', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'bp', get_template_directory() . '/languages' );
 
 		// Disable loading core block inline styles.
 		add_filter( 'should_load_separate_core_block_assets', '__return_true' );
@@ -58,21 +58,21 @@ function enqueue_frontend_scripts() {
 	$frontend_script_asset = require( $frontend_script_asset_path );
 
 	wp_register_script(
-		'bts-frontend-js',
+		'bp-frontend-js',
 		get_template_directory_uri() . '/build/assets/frontend.js',
 		$frontend_script_asset['dependencies'],
 		$frontend_script_asset['version'],
 	);
 
 	wp_register_style(
-		'bts-frontend-css',
+		'bp-frontend-css',
 		get_template_directory_uri() . '/build/assets/frontend.css',
 		[],
 		$frontend_script_asset['version'],
 	);
 
-	wp_enqueue_script( 'bts-frontend-js' );
-	wp_enqueue_style( 'bts-frontend-css' );
+	wp_enqueue_script( 'bp-frontend-js' );
+	wp_enqueue_style( 'bp-frontend-css' );
 
 }
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\enqueue_frontend_scripts' );
@@ -94,13 +94,13 @@ function enqueue_editor_scripts() {
 	$editor_script_asset = require( $editor_script_asset_path );
 
 	wp_register_script(
-		'bts-editor-js',
+		'bp-editor-js',
 		get_template_directory_uri() . '/build/assets/editor.js',
 		$editor_script_asset['dependencies'],
 		$editor_script_asset['version'],
 	);
 
-	wp_enqueue_script( 'bts-editor-js' );
+	wp_enqueue_script( 'bp-editor-js' );
 	add_editor_style( '/build/assets/editor.css' );
 }
 add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\\enqueue_editor_scripts' );
