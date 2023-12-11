@@ -652,8 +652,8 @@
 			}
 		},
 		"layout": {
-			"contentSize": "1200px",
-			"wideSize": "1920px"
+			"contentSize": "906px",
+			"wideSize": "1280px"
 		},
 		"shadow": {
 			"defaultPresets": false,
@@ -952,7 +952,8 @@
 					}
 				},
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--h-5)"
+					"fontSize": "var(--wp--preset--font-size--body-14)",
+					"fontWeight": "var(--wp--custom--font-weight--semi-bold)"
 				}
 			},
 			"core/post-title": {
