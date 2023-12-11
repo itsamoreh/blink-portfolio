@@ -4,6 +4,9 @@
  *
  * Automatically register all built blocks via block.json metadata.
  */
+
+namespace bp;
+
 function register_custom_blocks() {
 	$built_blocks_metadata = glob( get_template_directory() . '/build/blocks/*/block.json' );
 

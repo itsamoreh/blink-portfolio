@@ -118,3 +118,4 @@ include get_template_directory() . '/docs/help-admin-pages.php';
 include get_template_directory() . '/inc/reset/core-block-styles.php';
 include get_template_directory() . '/inc/reset/openverse.php';
 include get_template_directory() . '/inc/register-custom-blocks.php';
+include get_template_directory() . '/inc/register-test-cpt.php';
