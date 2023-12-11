@@ -21,6 +21,7 @@
 		"@wordpress/prettier-config": "^2.16.0",
 		"@wordpress/scripts": "^26.18.0",
 		"concurrently": "^8.2.2",
+		"postcss-extend": "^1.0.5",
 		"postcss-import": "^15.1.0",
 		"postcss-import-ext-glob": "^2.1.1",
 		"postcss-nested": "^6.0.1",
@@ -31,6 +32,7 @@
 		"plugins": {
 			"postcss-import-ext-glob": {},
 			"postcss-import": {},
+			"postcss-extend": {},
 			"postcss-nested": {},
 			"autoprefixer": {}
 		}
