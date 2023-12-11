@@ -1,0 +1,91 @@
+/* Heading Placeholders & Styles
+----------------------------------------------------------------------------
+
+	Use these placeholders to quickly set heading styles.
+
+	Heading styles for Gutenberg blocks are generated in in
+	`/assets/js/editor/block-styles/heading-styles.js`.
+
+	Usage as a placeholder in CSS files:
+	.example {
+		@extend %text-d1;
+	}
+*/
+
+%text-d1,
+.is-style-d1 {
+	font-size: var(--wp--preset--font-size--d-1);
+	font-weight: var(--wp--custom--font-weight--semi-bold);
+	line-height: 9rem;
+	letter-spacing: -7.5px;
+}
+
+%text-d2,
+.is-style-d2 {
+	font-size: var(--wp--preset--font-size--d-2);
+	font-weight: var(--wp--custom--font-weight--semi-bold);
+	line-height: 7rem;
+	letter-spacing: -5.5px;
+}
+
+%text-d3,
+.is-style-d3 {
+	font-size: var(--wp--preset--font-size--d-3);
+	font-weight: var(--wp--custom--font-weight--semi-bold);
+	line-height: 6.5rem;
+	letter-spacing: -4.5px;
+}
+
+%text-h1,
+h1,
+.is-style-h1 {
+	font-size: var(--wp--preset--font-size--h-1);
+	font-weight: var(--wp--custom--font-weight--semi-bold);
+	line-height: 5.625rem;
+	letter-spacing: -3.5px;
+}
+
+%text-h2,
+h2,
+.is-style-h2 {
+	font-size: var(--wp--preset--font-size--h-2);
+	font-weight: var(--wp--custom--font-weight--semi-bold);
+	line-height: 4.625rem;
+	letter-spacing: -2.5px;
+}
+
+%text-h3,
+h3,
+.is-style-h3 {
+	font-size: var(--wp--preset--font-size--h-3);
+	font-weight: var(--wp--custom--font-weight--semi-bold);
+	line-height: 4rem;
+	letter-spacing: -2.5px;
+}
+
+%text-h4,
+h4,
+.is-style-h4 {
+	font-size: var(--wp--preset--font-size--h-4);
+	font-weight: var(--wp--custom--font-weight--semi-bold);
+	line-height: 2.875rem;
+	letter-spacing: -2px;
+}
+
+%text-h5,
+h5,
+.is-style-h5 {
+	font-size: var(--wp--preset--font-size--h-5);
+	font-weight: var(--wp--custom--font-weight--semi-bold);
+	line-height: 2.5rem;
+	letter-spacing: -1px;
+}
+
+%text-h6,
+h6,
+.is-style-h6 {
+	font-size: var(--wp--preset--font-size--h-6);
+	font-weight: var(--wp--custom--font-weight--semi-bold);
+	line-height: 2.125rem;
+	letter-spacing: -0.6px;
+}

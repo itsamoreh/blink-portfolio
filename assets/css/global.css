@@ -9,6 +9,7 @@
 
 html {
 	scroll-behavior: smooth;
+	line-height: 1.666;
 }
 
 a,
@@ -38,7 +39,7 @@ textarea,
 	border-radius: 0;
 	color: var(--wp--preset--color--black-900);
 	font-family: var(--wp--preset--font-family--sans);
-	font-size: var(--wp--preset--font-size--body);
+	font-size: var(--wp--preset--font-size--body-18);
 	padding: 16px 24px;
 	width: 100%;
 }
