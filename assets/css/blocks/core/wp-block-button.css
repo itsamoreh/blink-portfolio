@@ -1,0 +1,25 @@
+.wp-block-button {
+	&.is-style-default-light {
+		.wp-element-button {
+			background-color: var(--wp--preset--color--white);
+			color: var(--wp--preset--color--black-700);
+			border-color: var(--wp--preset--color--white);
+		}
+	}
+
+	&.is-style-outline {
+		.wp-element-button {
+			background-color: var(--wp--preset--color--transparent);
+			color: var(--wp--preset--color--black-700);
+			border-color: currentColor;
+		}
+	}
+
+	&.is-style-outline-light {
+		.wp-element-button {
+			background-color: var(--wp--preset--color--transparent);
+			color: var(--wp--preset--color--white);
+			border-color: currentColor;
+		}
+	}
+}

@@ -1,6 +1,6 @@
 import themeJson from '../../../../theme.json';
 
-(function () {
+wp.domReady(() => {
 	const textBlocks = ['core/paragraph'];
 	const fontSizes = themeJson.settings.typography.fontSizes;
 	const headingFontSizes = fontSizes
@@ -19,4 +19,4 @@ import themeJson from '../../../../theme.json';
 			});
 		});
 	});
-})();
+});
