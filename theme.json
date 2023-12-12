@@ -7,6 +7,10 @@
 		{
 			"name": "no-title",
 			"title": "No Title"
+		},
+		{
+			"name": "single-test",
+			"title": "Single Test"
 		}
 	],
 	"settings": {
@@ -843,37 +847,20 @@
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--sans)",
 					"fontWeight": "500",
-					"fontSize": "16px"
+					"fontSize": "var(--wp--preset--font-size--body-20)"
 				},
 				"border": {
-					"radius": "0",
+					"radius": "38px",
 					"width": "2px",
 					"style": "solid",
-					"color": "transparent"
+					"color": "var(--wp--preset--color--black-700)"
 				},
 				"spacing": {
 					"padding": {
-						"top": "8px",
-						"right": "16px",
-						"bottom": "8px",
-						"left": "16px"
-					}
-				},
-				"variations": {
-					"outline": {
-						"border": {
-							"color": "currentColor",
-							"style": "solid",
-							"width": "2px"
-						},
-						"spacing": {
-							"padding": {
-								"top": "8px",
-								"right": "16px",
-								"bottom": "8px",
-								"left": "16px"
-							}
-						}
+						"top": "14px",
+						"right": "28px",
+						"bottom": "14px",
+						"left": "28px"
 					}
 				}
 			},
