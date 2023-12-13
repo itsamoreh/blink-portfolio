@@ -1,25 +1,81 @@
 .wp-block-button {
-	&.is-style-default-light {
+	.wp-element-button {
+		padding: 0.75rem 1.75rem;
+		font-size: 1.125rem;
+		line-height: 2rem;
+	}
+
+	/* Styles */
+	&.is-style-extra-large {
 		.wp-element-button {
-			background-color: var(--wp--preset--color--white);
-			color: var(--wp--preset--color--black-700);
-			border-color: var(--wp--preset--color--white);
+			padding: 1.25rem 2.5rem;
+			font-size: 1.625rem;
+			line-height: 2.375rem;
 		}
 	}
 
-	&.is-style-outline {
+	&.is-style-large {
 		.wp-element-button {
-			background-color: var(--wp--preset--color--transparent);
-			color: var(--wp--preset--color--black-700);
-			border-color: currentColor;
+			padding: 0.875rem 1.75rem;
+			font-size: 1.25rem;
+			line-height: 2.125rem;
 		}
 	}
 
-	&.is-style-outline-light {
+	&.is-style-default,
+	&.is-style-medium {
 		.wp-element-button {
-			background-color: var(--wp--preset--color--transparent);
+			padding: 0.75rem 1.75rem;
+			font-size: 1.125rem;
+			line-height: 2rem;
+			letter-spacing: -0.2px;
+		}
+	}
+
+	&.is-style-small {
+		.wp-element-button {
+			padding: 0.75rem 1.75rem;
+			font-size: 1rem;
+			line-height: 1.75rem;
+			letter-spacing: -0.2px;
+		}
+	}
+
+	&.is-style-extra-small {
+		.wp-element-button {
+			padding: 0.625rem 1.25rem;
+			font-size: 0.875rem;
+			line-height: 1.5rem;
+		}
+	}
+
+	/* Variations */
+	&.is-variation-pill-outline,
+	&.is-variation-pill-outline-light,
+	&.is-variation-rounded-outline,
+	&.is-variation-rounded-outline-light,
+	&.is-variation-sharp-outline,
+	&.is-variation-sharp-outline-light {
+		.wp-element-button {
+			background-color: transparent;
+			outline: 2px solid currentColor;
+			outline-offset: -2px;
+		}
+	}
+
+	&.is-variation-pill-outline,
+	&.is-variation-rounded-outline,
+	&.is-variation-sharp-outline {
+		.wp-element-button {
+			color: var(--wp--preset--color--black-700);
+		}
+	}
+
+	&.is-variation-pill-outline-light,
+	&.is-variation-rounded-outline-light,
+	&.is-variation-sharp-outline-light {
+		.wp-element-button {
 			color: var(--wp--preset--color--white);
-			border-color: currentColor;
 		}
 	}
 }

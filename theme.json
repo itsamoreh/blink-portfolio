@@ -834,6 +834,26 @@
 					"fontFamilies": [],
 					"fontWeight": false
 				}
+			},
+			"core/button": {
+				"color": {
+					"background": false,
+					"text": false
+				},
+				"spacing": {
+					"padding": false
+				},
+				"border": {
+					"radius": false,
+					"width": false,
+					"color": false,
+					"style": false
+				},
+				"typography": {
+					"fontSizes": [],
+					"fontFamilies": [],
+					"fontWeight": false
+				}
 			}
 		}
 	},
@@ -850,10 +870,7 @@
 					"fontSize": "var(--wp--preset--font-size--body-20)"
 				},
 				"border": {
-					"radius": "38px",
-					"width": "2px",
-					"style": "solid",
-					"color": "var(--wp--preset--color--black-700)"
+					"radius": "38px"
 				},
 				"spacing": {
 					"padding": {

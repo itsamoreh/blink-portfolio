@@ -1,57 +1,133 @@
 wp.domReady(() => {
 	wp.blocks.registerBlockVariation('core/button', {
 		title: 'Pill',
-		name: 'rounded',
-		attributes: { style: { border: { radius: '38px' } } },
+		name: 'pill',
+		attributes: {
+			className: 'is-variation-pill',
+			style: { border: { radius: '38px' } },
+		},
+		scope: ['transform'],
+	});
+
+	wp.blocks.registerBlockVariation('core/button', {
+		title: 'Pill Light',
+		name: 'pill-light',
+		attributes: {
+			className: 'is-variation-pill-light',
+			textColor: 'black-700',
+			backgroundColor: 'white',
+			style: {
+				border: { radius: '38px' },
+			},
+		},
+		scope: ['transform'],
+	});
+
+	wp.blocks.registerBlockVariation('core/button', {
+		title: 'Pill Outline',
+		name: 'pill-outline',
+		attributes: {
+			className: 'is-variation-pill-outline',
+			style: { border: { radius: '38px' } },
+		},
+		scope: ['transform'],
+	});
+
+	wp.blocks.registerBlockVariation('core/button', {
+		title: 'Pill Outline Light',
+		name: 'pill-outline-light',
+		attributes: {
+			className: 'is-variation-pill-outline-light',
+			style: { border: { radius: '38px' } },
+		},
 		scope: ['transform'],
 	});
 
 	wp.blocks.registerBlockVariation('core/button', {
 		title: 'Rounded',
-		name: 'soft-square',
-		attributes: { style: { border: { radius: '6px' } } },
+		name: 'rounded',
+		attributes: {
+			className: 'is-variation-rounded',
+			style: { border: { radius: '6px' } },
+		},
+		scope: ['transform'],
+	});
+
+	wp.blocks.registerBlockVariation('core/button', {
+		title: 'Rounded Light',
+		name: 'rounded-light',
+		attributes: {
+			className: 'is-variation-rounded-light',
+			textColor: 'black-700',
+			backgroundColor: 'white',
+			style: {
+				border: { radius: '6px' },
+			},
+		},
+		scope: ['transform'],
+	});
+
+	wp.blocks.registerBlockVariation('core/button', {
+		title: 'Rounded Outline',
+		name: 'rounded-outline',
+		attributes: {
+			className: 'is-variation-rounded-outline',
+			style: { border: { radius: '6px' } },
+		},
+		scope: ['transform'],
+	});
+
+	wp.blocks.registerBlockVariation('core/button', {
+		title: 'Rounded Outline Light',
+		name: 'rounded-outline-light',
+		attributes: {
+			className: 'is-variation-rounded-outline-light',
+			style: { border: { radius: '6px' } },
+		},
 		scope: ['transform'],
 	});
 
 	wp.blocks.registerBlockVariation('core/button', {
 		title: 'Sharp',
-		name: 'square',
-		attributes: { style: { border: { radius: '0' } } },
+		name: 'sharp',
+		attributes: {
+			className: 'is-variation-sharp',
+			style: { border: { radius: '0' } },
+		},
 		scope: ['transform'],
 	});
 
 	wp.blocks.registerBlockVariation('core/button', {
-		title: 'Size XL',
-		name: 'extra-large',
-		attributes: { style: { typography: { fontSize: '26px' } } },
+		title: 'Sharp Light',
+		name: 'sharp-light',
+		attributes: {
+			className: 'is-variation-sharp-light',
+			textColor: 'black-700',
+			backgroundColor: 'white',
+			style: {
+				border: { radius: '0' },
+			},
+		},
 		scope: ['transform'],
 	});
 
 	wp.blocks.registerBlockVariation('core/button', {
-		title: 'Size Large',
-		name: 'large',
-		attributes: { style: { typography: { fontSize: '20px' } } },
+		title: 'Sharp Outline',
+		name: 'sharp-outline',
+		attributes: {
+			className: 'is-variation-sharp-outline',
+			style: { border: { radius: '0' } },
+		},
 		scope: ['transform'],
 	});
 
 	wp.blocks.registerBlockVariation('core/button', {
-		title: 'Size Default',
-		name: 'deafult',
-		attributes: { style: { typography: { fontSize: '18px' } } },
-		scope: ['transform'],
-	});
-
-	wp.blocks.registerBlockVariation('core/button', {
-		title: 'Size Small',
-		name: 'small',
-		attributes: { style: { typography: { fontSize: '16px' } } },
-		scope: ['transform'],
-	});
-
-	wp.blocks.registerBlockVariation('core/button', {
-		title: 'Size XS',
-		name: 'extra-small',
-		attributes: { style: { typography: { fontSize: '14px' } } },
+		title: 'Sharp Outline Light',
+		name: 'sharp-outline-light',
+		attributes: {
+			className: 'is-variation-sharp-outline-light',
+			style: { border: { radius: '0' } },
+		},
 		scope: ['transform'],
 	});
 });

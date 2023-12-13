@@ -1,16 +1,26 @@
 wp.domReady(() => {
 	wp.blocks.registerBlockStyle('core/button', {
-		name: 'default-light',
-		label: 'Default Light',
+		name: 'extra-large',
+		label: 'Extra Large',
 	});
 
 	wp.blocks.registerBlockStyle('core/button', {
-		name: 'outline',
-		label: 'Outline',
+		name: 'large',
+		label: 'Large',
 	});
 
 	wp.blocks.registerBlockStyle('core/button', {
-		name: 'outline-light',
-		label: 'Outline Light',
+		name: 'medium',
+		label: 'Medium',
+	});
+
+	wp.blocks.registerBlockStyle('core/button', {
+		name: 'small',
+		label: 'Small',
+	});
+
+	wp.blocks.registerBlockStyle('core/button', {
+		name: 'extra-small',
+		label: 'Extra Small',
 	});
 });
