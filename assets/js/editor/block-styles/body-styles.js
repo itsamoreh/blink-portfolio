@@ -9,8 +9,6 @@ wp.domReady(() => {
 		// Sort by size from largest to smallest
 		.sort((a, b) => parseFloat(b.size) - parseFloat(a.size));
 
-	console.log(headingFontSizes);
-
 	textBlocks.forEach((block) => {
 		headingFontSizes.forEach((headingFontSize) => {
 			wp.blocks.registerBlockStyle(block, {
