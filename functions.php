@@ -32,6 +32,10 @@ if ( ! function_exists( 'setup' ) ) {
 		// Remove core block patterns.
 		remove_theme_support( 'core-block-patterns' );
 
+		// Add editor styles.
+		add_theme_support( 'editor-styles' );
+		add_editor_style( '/build/assets/editor.css' );
+
 		// Don't install bundled themes when WordPress updates.
 		define( 'CORE_UPGRADE_SKIP_NEW_BUNDLED', true );
 
@@ -101,7 +105,6 @@ function enqueue_editor_scripts() {
 	);
 
 	wp_enqueue_script( 'bp-editor-js' );
-	add_editor_style( '/build/assets/editor.css' );
 }
 add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\\enqueue_editor_scripts' );
 
