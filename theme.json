@@ -9,8 +9,9 @@
 			"title": "No Title"
 		},
 		{
-			"name": "single-test",
-			"title": "Single Test"
+			"name": "single-bp_test",
+			"title": "Single Test",
+			"postTypes": ["bp_test"]
 		}
 	],
 	"settings": {
