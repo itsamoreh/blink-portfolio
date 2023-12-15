@@ -1,17 +1,4 @@
-/* Body Placeholders & Styles
-----------------------------------------------------------------------------
-
-	Use these placeholders to quickly set body styles.
-
-	Body styles for Gutenberg blocks are generated in in
-	`/assets/js/editor/block-styles/body-styles.js`.
-
-	Usage as a placeholder in CSS files:
-	.example {
-		@mixin text-body-26;
-	}
-*/
-
+/* Paragraph blocks don't get a .wp-block-* class */
 .is-style-body-26 {
 	@mixin text-body-26;
 }
