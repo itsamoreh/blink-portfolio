@@ -25,7 +25,7 @@ function register_test_page_cpt() {
         'name'               => 'Test Pages',
         'singular_name'      => 'Test Page',
         'menu_name'          => 'Test Pages',
-        'add_new'            => 'Add New',
+        'add_new'            => 'Add New Test Page',
         'add_new_item'       => 'Add New Test Page',
         'edit_item'          => 'Edit Page',
         'new_item'           => 'New Page',
