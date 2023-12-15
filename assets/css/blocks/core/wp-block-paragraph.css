@@ -1,0 +1,46 @@
+/* Body Placeholders & Styles
+----------------------------------------------------------------------------
+
+	Use these placeholders to quickly set body styles.
+
+	Body styles for Gutenberg blocks are generated in in
+	`/assets/js/editor/block-styles/body-styles.js`.
+
+	Usage as a placeholder in CSS files:
+	.example {
+		@extend %text-body-26;
+	}
+*/
+
+.is-style-body-26 {
+	@extend %text-body-26;
+}
+
+.is-style-body-26 {
+	@extend %text-body-26;
+}
+
+.is-style-body-22 {
+	@extend %text-body-22;
+}
+
+.is-style-body-20 {
+	@extend %text-body-20;
+}
+
+p,
+.is-style-body-18 {
+	@extend %text-body-18;
+}
+
+.is-style-body-16 {
+	@extend %text-body-16;
+}
+
+.is-style-body-14 {
+	@extend %text-body-14;
+}
+
+.is-style-body-12 {
+	@extend %text-body-12;
+}

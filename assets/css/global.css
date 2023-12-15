@@ -27,6 +27,10 @@ strong {
 	font-weight: var(--wp--custom--font-weight--bold);
 }
 
+p {
+	@extend %text-body-18;
+}
+
 /* Forms
 --------------------------------------------- */
 

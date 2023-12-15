@@ -1,4 +1,4 @@
-@import-glob "./placeholders/**/!(placeholders).css";
+@import-glob "./abstracts/**/!(abstracts).css";
 
 @import "./global.css";
 
