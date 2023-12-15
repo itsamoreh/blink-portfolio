@@ -21,6 +21,7 @@
 		"@wordpress/prettier-config": "^2.16.0",
 		"@wordpress/scripts": "^26.18.0",
 		"concurrently": "^8.2.2",
+		"cssnano": "^6.0.2",
 		"postcss-import": "^15.1.0",
 		"postcss-import-ext-glob": "^2.1.1",
 		"postcss-mixins": "^9.0.4",
@@ -34,7 +35,8 @@
 			"postcss-import": {},
 			"postcss-nested": {},
 			"postcss-mixins": {},
-			"autoprefixer": {}
+			"autoprefixer": {},
+			"cssnano": {}
 		}
 	}
 }
