@@ -1,43 +1,43 @@
 .wp-block-heading {
-	.is-style-d1 {
-		@extend %text-d1;
+	&.is-style-d1 {
+		@mixin text-d1;
 	}
 
-	.is-style-d2 {
-		@extend %text-d2;
+	&.is-style-d2 {
+		@mixin text-d2;
 	}
 
-	.is-style-d3 {
-		@extend %text-d3;
+	&.is-style-d3 {
+		@mixin text-d3;
 	}
 
-	:is(h1),
-	.is-style-h1 {
-		@extend %text-h1;
+	&:is(h1),
+	&.is-style-h1 {
+		@mixin text-h1;
 	}
 
-	:is(h2),
-	.is-style-h2 {
-		@extend %text-h2;
+	&:is(h2),
+	&.is-style-h2 {
+		@mixin text-h2;
 	}
 
-	:is(h3),
-	.is-style-h3 {
-		@extend %text-h3;
+	&:is(h3),
+	&.is-style-h3 {
+		@mixin text-h3;
 	}
 
-	:is(h4),
-	.is-style-h4 {
-		@extend %text-h4;
+	&:is(h4),
+	&.is-style-h4 {
+		@mixin text-h4;
 	}
 
-	:is(h5),
-	.is-style-h5 {
-		@extend %text-h5;
+	&:is(h5),
+	&.is-style-h5 {
+		@mixin text-h5;
 	}
 
-	:is(h6),
-	.is-style-h6 {
-		@extend %text-h6;
+	&:is(h6),
+	&.is-style-h6 {
+		@mixin text-h6;
 	}
 }

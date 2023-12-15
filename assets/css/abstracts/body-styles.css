@@ -1,60 +1,60 @@
-/* Body Placeholders & Styles
+/* Body Text Mixins
 ----------------------------------------------------------------------------
 
-	Use these placeholders to quickly set body styles.
+	Use these mixins to quickly set body styles.
 
 	Body styles for Gutenberg blocks are generated in in
 	`/assets/js/editor/block-styles/body-styles.js`.
 
-	Usage as a placeholder in CSS files:
+	Usage as a mixin in CSS files:
 	.example {
-		@extend %text-body-26;
+		@mixin text-body-26;
 	}
 */
 
-%text-body-26 {
+@define-mixin text-body-26 {
 	font-size: var(--wp--preset--font-size--body-26);
 	font-weight: var(--wp--custom--font-weight--normal);
 	line-height: 2.5rem;
 }
 
-%text-body-26 {
+@define-mixin text-body-26 {
 	font-size: var(--wp--preset--font-size--body-26);
 	font-weight: var(--wp--custom--font-weight--normal);
 	line-height: 2.5rem;
 }
 
-%text-body-22 {
+@define-mixin text-body-22 {
 	font-size: var(--wp--preset--font-size--body-22);
 	font-weight: var(--wp--custom--font-weight--normal);
 	line-height: 2.375rem;
 }
 
-%text-body-20 {
+@define-mixin text-body-20 {
 	font-size: var(--wp--preset--font-size--body-20);
 	font-weight: var(--wp--custom--font-weight--normal);
 	line-height: 2rem;
 }
 
-%text-body-18 {
+@define-mixin text-body-18 {
 	font-size: var(--wp--preset--font-size--body-18);
 	font-weight: var(--wp--custom--font-weight--normal);
 	line-height: 1.875rem;
 }
 
-%text-body-16 {
+@define-mixin text-body-16 {
 	font-size: var(--wp--preset--font-size--body-16);
 	font-weight: var(--wp--custom--font-weight--normal);
 	line-height: 1.625rem;
 }
 
-%text-body-14 {
+@define-mixin text-body-14 {
 	font-size: var(--wp--preset--font-size--body-14);
 	font-weight: var(--wp--custom--font-weight--normal);
 	line-height: 1.375rem;
 }
 
-%text-body-12 {
+@define-mixin text-body-12 {
 	font-size: var(--wp--preset--font-size--body-12);
 	font-weight: var(--wp--custom--font-weight--normal);
 	line-height: 1.25rem;

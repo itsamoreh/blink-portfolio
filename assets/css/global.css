@@ -28,7 +28,7 @@ strong {
 }
 
 p {
-	@extend %text-body-18;
+	@mixin text-body-18;
 }
 
 /* Forms
