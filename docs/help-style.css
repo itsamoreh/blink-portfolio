@@ -1,4 +1,4 @@
-/* NOTE: This is a regular css file */
+/* NOTE: This file will not be pre-processed. */
 
 /* Make the content a readable width */
 [class*="bp-docs"] #wpbody-content {
@@ -6,9 +6,6 @@
 	flex-direction: column;
 	max-width: 1024px;
 	margin: 0 auto;
-}
-
-[class*="bp-docs"] #wpbody-content {
 	font-size: 18px;
 }
 
@@ -24,12 +21,12 @@
 	font-size: 1.1em;
 }
 
-[class*="bp-docs"] #wpbody-content h3 + p {
-	margin-block-start: 0.5em;
-}
-
 [class*="bp-docs"] #wpbody-content p {
 	font-size: inherit;
+}
+
+[class*="bp-docs"] #wpbody-content h3 + p {
+	margin-block-start: 0.5em;
 }
 
 [class*="bp-docs"] #wpbody-content p + p {

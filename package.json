@@ -10,6 +10,8 @@
 		"build:blocks": "npm run clean:blocks && wp-scripts build --webpack-src-dir='./blocks' --output-path='./build/blocks' --webpack-copy-php",
 		"watch:blocks": "npm run clean:blocks && wp-scripts start --webpack-src-dir='./blocks' --output-path='./build/blocks' --webpack-copy-php",
 		"clean:blocks": "rimraf ./build/blocks",
+		"lint:css": "npx wp-scripts lint-style",
+		"lint:js": "npx wp-scripts lint-js",
 		"env:start": "npx wp-env start",
 		"env:stop": "npx wp-env stop"
 	},
@@ -18,17 +20,18 @@
 	},
 	"devDependencies": {
 		"@wordpress/env": "^7.0.0",
+		"@wordpress/eslint-plugin": "^17.5.0",
 		"@wordpress/prettier-config": "^2.16.0",
 		"@wordpress/scripts": "^26.18.0",
+		"@wordpress/stylelint-config": "^21.31.0",
 		"concurrently": "^8.2.2",
 		"cssnano": "^6.0.2",
-		"postcss-import": "^15.1.0",
 		"postcss-import-ext-glob": "^2.1.1",
+		"postcss-import": "^15.1.0",
 		"postcss-mixins": "^9.0.4",
 		"postcss-nested": "^6.0.1",
 		"rimraf": "^5.0.1"
 	},
-	"prettier": "@wordpress/prettier-config",
 	"postcss": {
 		"plugins": {
 			"postcss-import-ext-glob": {},
@@ -37,6 +40,34 @@
 			"postcss-mixins": {},
 			"autoprefixer": {},
 			"cssnano": {}
+		}
+	},
+	"prettier": "@wordpress/prettier-config",
+	"eslintConfig": {
+		"extends": [
+			"plugin:@wordpress/eslint-plugin/recommended"
+		]
+	},
+	"stylelint": {
+		"extends": "@wordpress/stylelint-config",
+		"rules": {
+			"rule-empty-line-before": null,
+			"at-rule-empty-line-before": null,
+			"at-rule-no-unknown": [
+				true,
+				{
+					"ignoreAtRules": [
+						"mixin",
+						"define-mixin",
+						"import-glob"
+					]
+				}
+			],
+			"declaration-property-unit-allowed-list": {
+				"line-height": [
+					"rem"
+				]
+			}
 		}
 	}
 }

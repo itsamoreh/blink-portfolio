@@ -1,7 +1,4 @@
 /* Paragraph blocks don't get a .wp-block-* class */
-.is-style-body-26 {
-	@mixin text-body-26;
-}
 
 .is-style-body-26 {
 	@mixin text-body-26;
