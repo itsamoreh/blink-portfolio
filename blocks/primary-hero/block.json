@@ -8,24 +8,16 @@
 	"icon": "align-full-width",
 	"attributes": {
 		"title": {
-			"type": "object",
-			"default": {
-				"text": "",
-				"textColor": "",
-				"fontSize": ""
-			}
+			"type": "string",
+			"default": ""
 		},
 		"body": {
 			"type": "string",
 			"default": ""
 		},
-		"cta": {
-			"type": "object",
-			"default": {
-				"url": "",
-				"text": "Learn More",
-				"show": false
-			}
+		"buttonCount": {
+			"type": "number",
+			"default": 0
 		}
 	},
 	"supports": {
@@ -34,7 +26,6 @@
 	},
 	"textdomain": "bp",
 	"editorScript": "file:./index.js",
-	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css",
 	"render": "file:./primary-hero.php",
 	"viewScript": "file:./view.js"

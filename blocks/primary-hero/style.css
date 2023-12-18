@@ -1,14 +1,29 @@
-.bp-primary-hero {
-	padding: var(--wp--preset--spacing--x-large);
-	border: 2px solid var(--wp--preset--color--black-900);
+@import "../../assets/css/abstracts/heading-styles.css";
 
-	&__title {
-		margin-top: 0;
+.bp-primary-hero {
+	&__content {
+		margin: 4rem 0;
+		display: grid;
+		grid-template-columns: repeat(12, [col-start] 1fr);
+		gap: 32px;
 	}
 
-	&__link {
-		display: inline-block;
-		color: var(--wp--preset--color--white);
-		margin-right: var(--wp--preset--spacing--x-small);
+	&__title {
+		margin: 0;
+		grid-column: 1 / span 7;
+		@mixin text-d3;
+	}
+
+	&__content-right {
+		grid-column: 8 / span 5;
+	}
+
+	&__body {
+		margin: 0;
+		margin-bottom: 1rem;
+		@mixin text-h6;
+	}
+
+	&__buttons {
 	}
 }

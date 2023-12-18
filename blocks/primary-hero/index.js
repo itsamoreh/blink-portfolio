@@ -4,6 +4,7 @@
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
 import { registerBlockType } from '@wordpress/blocks';
+import { InnerBlocks } from '@wordpress/block-editor';
 
 /**
  * Internal dependencies
@@ -25,5 +26,7 @@ registerBlockType(name, {
 	/**
 	 * This is a dynamic block.
 	 */
-	save: () => null,
+	save: () => {
+		return <InnerBlocks.Content />;
+	},
 });

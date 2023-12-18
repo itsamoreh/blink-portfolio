@@ -1,25 +1,40 @@
 import { __ } from '@wordpress/i18n';
-import {
-	RichText,
-	InspectorControls,
-	URLInput,
-	useBlockProps,
-} from '@wordpress/block-editor';
-import { PanelBody, ToggleControl } from '@wordpress/components';
-
-import './editor.css';
+import { RichText, useBlockProps, InnerBlocks } from '@wordpress/block-editor';
 
 /**
  * Primary Hero Block
  *
- * @param {object} props props
- * @returns {object} JSX
+ * @param {Object} props props
+ * @return {Object} JSX
  */
 const PrimaryHero = (props) => {
 	const { attributes, setAttributes } = props;
-	const { title, body, cta } = attributes;
+	const { title, body } = attributes;
 
-	const blockProps = useBlockProps({ className: 'bp-primary-hero' });
+	const blockProps = useBlockProps({
+		className: 'bp-primary-hero',
+	});
+
+	const BUTTON_TEMPLATE = [
+		'core/button',
+		{
+			className: 'is-variation-pill-outline is-style-badge-small',
+		},
+	];
+
+	const BUTTONS_TEMPLATE = [
+		[
+			'core/buttons',
+			{
+				style: {
+					spacing: {
+						blockGap: '12px',
+					},
+				},
+			},
+			Array(3).fill(BUTTON_TEMPLATE),
+		],
+	];
 
 	return (
 		<>
@@ -27,73 +42,30 @@ const PrimaryHero = (props) => {
 				<div className="bp-primary-hero__content">
 					<RichText
 						className="bp-primary-hero__title"
-						tagName="h2"
-						placeholder={__('Title here …', 'bp')}
-						value={title.text}
-						onChange={(newTitleText) =>
-							setAttributes({
-								title: {
-									...attributes.title,
-									text: newTitleText,
-								},
-							})
+						tagName="h1"
+						placeholder={__('Title here…', 'bp')}
+						value={title}
+						onChange={(newTitle) =>
+							setAttributes({ title: newTitle })
 						}
 					/>
-					<RichText
-						className="bp-primary-hero__body"
-						tagName="p"
-						placeholder={__('Body here…', 'bp')}
-						value={body}
-						onChange={(body) => setAttributes({ body })}
-					/>
-					{cta.show && (
+					<div className="bp-primary-hero__content-right">
 						<RichText
-							className="wp-element-button bp-primary-hero__link"
-							tagName="a"
-							value={cta.text || ''}
-							onChange={(newCtaText) =>
-								setAttributes({
-									cta: {
-										...attributes.cta,
-										text: newCtaText,
-									},
-								})
+							className="bp-primary-hero__body"
+							tagName="p"
+							placeholder={__('Body here…', 'bp')}
+							value={body}
+							onChange={(newBody) =>
+								setAttributes({ body: newBody })
 							}
-							allowedFormats={[]}
 						/>
-					)}
+						<InnerBlocks
+							template={BUTTONS_TEMPLATE}
+							templateLock="all"
+						/>
+					</div>
 				</div>
 			</div>
-			<InspectorControls>
-				<PanelBody>
-					<ToggleControl
-						label={__('Show CTA', 'bp')}
-						checked={cta.show}
-						onChange={() =>
-							setAttributes({
-								cta: {
-									...attributes.cta,
-									show: !attributes.cta.show,
-								},
-							})
-						}
-						help={__('Show the call to action button.', 'bp')}
-					/>
-					{cta.show && (
-						<URLInput
-							isFullWidth
-							label={__('URL', 'bp')}
-							value={cta.url || ''}
-							onChange={(newCtaUrl) => {
-								setAttributes({
-									cta: { ...attributes.cta, url: newCtaUrl },
-								});
-							}}
-							__nextHasNoMarginBottom
-						/>
-					)}
-				</PanelBody>
-			</InspectorControls>
 		</>
 	);
 };

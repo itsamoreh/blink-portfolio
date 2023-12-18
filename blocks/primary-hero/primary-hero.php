@@ -13,15 +13,13 @@
 <section <?php echo get_block_wrapper_attributes(['class' => 'bp-primary-hero']); // phpcs:ignore ?>>
 	<div class="bp-primary-hero__content">
 		<h2 class="bp-primary-hero__title">
-			<?php echo wp_kses_post($attributes['title']['text']); ?>
+			<?php echo wp_kses_post($attributes['title']); ?>
 		</h2>
-		<p class="bp-primary-hero__body">
-			<?php echo wp_kses_post($attributes['body']); ?>
-		</p>
-		<?php if (isset($attributes['cta']['url']) && true === $attributes['cta']['show']) : ?>
-			<a href="<?php echo esc_url($attributes['cta']['url']); ?>" class="bp-primary-hero__link wp-element-button">
-			<?php echo esc_html($attributes['cta']['text']); ?>
-			</a>
-		<?php endif; ?>
+		<div class="bp-primary-hero__content-right">
+			<p class="bp-primary-hero__body">
+				<?php echo wp_kses_post($attributes['body']); ?>
+			</p>
+			<?php echo $content ?>
+		</div>
 	</div>
 </section>
