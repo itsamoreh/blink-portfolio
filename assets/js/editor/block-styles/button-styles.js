@@ -23,4 +23,19 @@ wp.domReady(() => {
 		name: 'extra-small',
 		label: 'Extra Small',
 	});
+
+	wp.blocks.registerBlockStyle('core/button', {
+		name: 'badge-large',
+		label: 'Badge Large',
+	});
+
+	wp.blocks.registerBlockStyle('core/button', {
+		name: 'badge-medium',
+		label: 'Badge Medium',
+	});
+
+	wp.blocks.registerBlockStyle('core/button', {
+		name: 'badge-small',
+		label: 'Badge Small',
+	});
 });
