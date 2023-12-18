@@ -1,0 +1,5 @@
+.wp-block-post-title {
+	&.editor-post-title {
+		@mixin text-h1;
+	}
+}
