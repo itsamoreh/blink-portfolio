@@ -1,18 +1,33 @@
 .bp-primary-hero {
 	&__media-button-wrapper {
+		position: absolute;
 		height: 100%;
 		width: 100%;
+		background-color: #00000060;
+		justify-content: stretch;
 
-		display: grid;
-		justify-content: center;
+		opacity: 0;
+		transition: opacity 0.5s;
 
 		button {
-			display: none;
+			display: block;
+			width: 100%;
+			height: 100%;
+			color: #fff;
+
+			&:hover {
+				color: #fff;
+			}
 		}
+	}
+
+	&__image {
+		position: relative;
 
 		&:hover {
-			button {
-				display: block;
+			/* stylelint-disable-next-line selector-class-pattern */
+			.bp-primary-hero__media-button-wrapper {
+				opacity: 100;
 			}
 		}
 	}
