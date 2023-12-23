@@ -18,6 +18,10 @@
 		"buttonCount": {
 			"type": "number",
 			"default": 0
+		},
+		"images": {
+			"type": "array",
+			"default": [0, 0, 0, 0, 0, 0]
 		}
 	},
 	"supports": {
@@ -26,6 +30,7 @@
 	},
 	"textdomain": "bp",
 	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
 	"style": "file:./style-index.css",
 	"render": "file:./primary-hero.php",
 	"viewScript": "file:./view.js"

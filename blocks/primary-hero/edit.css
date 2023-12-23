@@ -1,0 +1,19 @@
+.bp-primary-hero {
+	&__media-button-wrapper {
+		height: 100%;
+		width: 100%;
+
+		display: grid;
+		justify-content: center;
+
+		button {
+			display: none;
+		}
+
+		&:hover {
+			button {
+				display: block;
+			}
+		}
+	}
+}

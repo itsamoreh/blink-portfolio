@@ -21,5 +21,14 @@
 			</p>
 			<?php echo $content ?>
 		</div>
+		<div class="bp-primary-hero__image-grid">
+		<?php
+  			foreach ( $attributes['images'] as $image_id ) {
+				echo '<div class="bp-primary-hero__image">';
+				echo wp_get_attachment_image( $image_id, 'full' );
+				echo '</div>';
+			}
+  		?>
+		</div>
 	</div>
 </section>

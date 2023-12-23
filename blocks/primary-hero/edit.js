@@ -1,5 +1,13 @@
 import { __ } from '@wordpress/i18n';
-import { RichText, useBlockProps, InnerBlocks } from '@wordpress/block-editor';
+import {
+	RichText,
+	useBlockProps,
+	InnerBlocks,
+	MediaUpload,
+	MediaUploadCheck,
+} from '@wordpress/block-editor';
+import { Button } from '@wordpress/components';
+import AttachmentImage from '../_components/AttachmentImage';
 
 /**
  * Primary Hero Block
@@ -9,7 +17,7 @@ import { RichText, useBlockProps, InnerBlocks } from '@wordpress/block-editor';
  */
 const PrimaryHero = (props) => {
 	const { attributes, setAttributes } = props;
-	const { title, body } = attributes;
+	const { title, body, images } = attributes;
 
 	const blockProps = useBlockProps({
 		className: 'bp-primary-hero',
@@ -63,6 +71,39 @@ const PrimaryHero = (props) => {
 							template={BUTTONS_TEMPLATE}
 							templateLock="all"
 						/>
+					</div>
+
+					<div className="bp-primary-hero__image-grid">
+						{images.map((image, index) => (
+							<div className="bp-primary-hero__image" key={index}>
+								<MediaUploadCheck>
+									<MediaUpload
+										allowedTypes={['image']}
+										value={image}
+										onSelect={(newImage) => {
+											const newImages = [...images];
+											newImages[index] = newImage.id;
+											setAttributes({
+												images: newImages,
+											});
+										}}
+										render={({ open }) => (
+											<div className="bp-primary-hero__media-button-wrapper">
+												<Button onClick={open}>
+													Select or replace image
+												</Button>
+											</div>
+										)}
+									/>
+								</MediaUploadCheck>
+								{images[index] && (
+									<AttachmentImage
+										imageId={images[index]}
+										size="full"
+									/>
+								)}
+							</div>
+						))}
 					</div>
 				</div>
 			</div>

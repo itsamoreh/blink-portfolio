@@ -13,6 +13,7 @@ import json from './block.json';
 import Edit from './edit';
 
 import './style.css';
+import './edit.css';
 
 const { name } = json;
 
