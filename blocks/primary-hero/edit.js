@@ -90,13 +90,15 @@ const PrimaryHero = (props) => {
 										render={({ open }) => (
 											<div className="bp-primary-hero__media-button-wrapper">
 												<Button onClick={open}>
-													Select or replace image
+													{images[index] === 0
+														? 'Select Image'
+														: 'Replace Image'}
 												</Button>
 											</div>
 										)}
 									/>
 								</MediaUploadCheck>
-								{images[index] && (
+								{images[index] !== 0 && (
 									<AttachmentImage
 										imageId={images[index]}
 										size="full"
