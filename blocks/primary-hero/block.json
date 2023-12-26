@@ -15,10 +15,6 @@
 			"type": "string",
 			"default": ""
 		},
-		"buttonCount": {
-			"type": "number",
-			"default": 0
-		},
 		"images": {
 			"type": "array",
 			"default": [0, 0, 0, 0, 0, 0]
@@ -26,7 +22,7 @@
 	},
 	"supports": {
 		"html": false,
-		"align": true
+		"align": ["wide"]
 	},
 	"textdomain": "bp",
 	"editorScript": "file:./index.js",

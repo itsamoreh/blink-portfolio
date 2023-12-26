@@ -74,3 +74,9 @@
 	line-height: 2.125rem;
 	letter-spacing: -0.0375rem;
 }
+
+@define-mixin text-h7 {
+	font-size: var(--wp--preset--font-size--body-20);
+	font-weight: var(--wp--custom--font-weight--semi-bold);
+	line-height: 1.75rem;
+}

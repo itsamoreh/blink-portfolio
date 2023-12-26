@@ -4,27 +4,51 @@
 	container-type: inline-size;
 
 	&__content {
-		margin: 4rem 0;
+		margin: 2rem 0 2.5rem 0;
 		display: grid;
 		grid-template-columns: repeat(12, [col-start] 1fr);
-		gap: 32px;
-		row-gap: 72px;
+		gap: 0;
+		row-gap: 0;
+
+		@container (min-width: 768px) {
+			margin: 4rem 0 5rem 0;
+			gap: 32px;
+			row-gap: 72px;
+		}
 	}
 
 	&__title {
 		margin: 0;
-		grid-column: 1 / span 7;
-		@mixin text-d3;
+		margin-bottom: 16px;
+		grid-column: 1 / span 12;
+		@mixin text-h4;
+
+		@container (min-width: 768px) {
+			margin-bottom: 0;
+			grid-column: 1 / span 7;
+			@mixin text-d3;
+		}
 	}
 
 	&__content-right {
-		grid-column: 8 / span 5;
+		margin-bottom: 2rem;
+		grid-column: 1 / span 12;
+
+		@container (min-width: 768px) {
+			margin-bottom: 0;
+			grid-column: 8 / span 5;
+		}
 	}
 
 	&__body {
 		margin: 0;
-		margin-bottom: 1rem;
-		@mixin text-h6;
+		margin-bottom: 1.5rem;
+		@mixin text-h7;
+
+		@container (min-width: 768px) {
+			margin-bottom: 1rem;
+			@mixin text-h6;
+		}
 	}
 
 	/* &__buttons {} */
@@ -41,12 +65,13 @@
 	}
 
 	&__image {
-		height: 140px;
+		height: 64px;
 		background-color: var(--wp--preset--color--blue-black-200);
 		overflow: hidden;
 		border-radius: 20px;
 
 		@container (min-width: 768px) {
+			height: 140px;
 			border-radius: 40px;
 		}
 
