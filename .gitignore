@@ -5,6 +5,7 @@ Thumbs.db
 
 # ignore dependencies
 node_modules/
+vendor/
 
 # ignore build files
 build/
