@@ -1,0 +1,17 @@
+Please generate a "media and text" block (media-text).
+
+edit.js
+The editor component should have an image upload field like the ones in primary-hero/edit.js.
+
+The paragraph on the right should be a richtext component.
+
+style.css
+The block has one rounded image on the left and a paragraph on the right. Use appropriate padding and make it look nice and fit the style of the primary-hero.
+
+----
+
+FOLLOW UP
+
+----
+
+You forgot index.js, README.md

@@ -1,0 +1,32 @@
+{
+	"apiVersion": 2,
+	"name": "bp/media-text",
+	"title": "Media and Text",
+	"category": "design",
+	"icon": "align-pull-left",
+	"description": "Display media on the left with text content on the right.",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "bp",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"attributes": {
+		"mediaId": {
+			"type": "number"
+		},
+		"mediaUrl": {
+			"type": "string",
+			"default": ""
+		},
+		"mediaAlt": {
+			"type": "string",
+			"default": ""
+		},
+		"content": {
+			"type": "string",
+			"default": ""
+		}
+	}
+}
