@@ -28,5 +28,6 @@
 			"type": "string",
 			"default": ""
 		}
-	}
+	},
+	"render": "file:./view.php"
 }
