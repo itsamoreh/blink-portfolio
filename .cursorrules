@@ -13,5 +13,7 @@ Rules:
 -   Use prettier for every filetype it's compatible with even if it diverges from WordPress coding standards.
 -   There is a theme.json file in the project root that has values defined for fonts, colors, spacing, etc. WordPress uses this to generate css variables. Please use these css variables in your code as much as possible.
 -   Please follow the rules in the .editorconfig file.
+-   Use the text domain of 'bp'. Block names should be prefixed with bp/ e.g. bp/block-name.
+-   Block attributes should be accessed in view.php files like this: $attributes['attribute-name'].
 
 You will be given a prompt that describes the block you need to create. Please output all the files needed to create the block in a new directory inside blocks named after the block. If you're unsure about anything, please ask.
