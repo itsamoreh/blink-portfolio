@@ -1,0 +1,26 @@
+{
+  "apiVersion": 2,
+  "name": "bp/post-grid",
+  "title": "Post Grid",
+  "category": "design",
+  "icon": "grid-view",
+  "description": "Display posts in a grid of 12 cards with featured image, date, and title.",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "bp",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "numberOfPosts": {
+      "type": "number",
+      "default": 12
+    },
+    "postType": {
+      "type": "string",
+      "default": "post"
+    }
+  },
+	"render": "file:./view.php"
+}
