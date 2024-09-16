@@ -9,8 +9,9 @@ frontend rendering. Block attributes are defined in the block.json file.
 Rules:
 
 -   You must follow WordPress best practices and coding standards.
--   Follow formatting of the existing blocks even if it diverges from the WordPress coding standards.
--   Use prettier for every filetype it's compatible with even if it diverges from WordPress coding standards.
+-   Do not override WordPress global variables in PHP.
+-   Use PHPCBF with the WordPress standard to format PHP.
+-   Use prettier to format all other file types.
 -   There is a theme.json file in the project root that has values defined for fonts, colors, spacing, etc. WordPress uses this to generate css variables. Please use these css variables in your code as much as possible.
 -   Please follow the rules in the .editorconfig file.
 -   Use the text domain of 'bp'. Block names should be prefixed with bp/ e.g. bp/block-name.
