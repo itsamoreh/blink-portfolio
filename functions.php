@@ -38,7 +38,6 @@ if ( ! function_exists( 'setup' ) ) {
 
 		// Don't install bundled themes when WordPress updates.
 		define( 'CORE_UPGRADE_SKIP_NEW_BUNDLED', true );
-
 	}
 }
 add_action( 'after_setup_theme', __NAMESPACE__ . '\\setup' );
@@ -48,18 +47,18 @@ add_action( 'after_setup_theme', __NAMESPACE__ . '\\setup' );
  */
 function enqueue_frontend_scripts() {
 
-	$dir = dirname( __FILE__ );
+	$dir = __DIR__;
 
 	// Register and enqueue frontend scripts.
-    $frontend_script_asset_path = "$dir/build/assets/frontend.asset.php";
+	$frontend_script_asset_path = "$dir/build/assets/frontend.asset.php";
 
 	if ( ! file_exists( $frontend_script_asset_path ) ) {
-        throw new \Error(
-            'Missing frontend script assets! Please follow the setup instructions in the theme README.md.'
-        );
-    }
+		throw new \Error(
+			'Missing frontend script assets! Please follow the setup instructions in the theme README.md.'
+		);
+	}
 
-	$frontend_script_asset = require( $frontend_script_asset_path );
+	$frontend_script_asset = require $frontend_script_asset_path;
 
 	wp_register_script(
 		'bp-frontend-js',
@@ -71,13 +70,12 @@ function enqueue_frontend_scripts() {
 	wp_register_style(
 		'bp-frontend-css',
 		get_template_directory_uri() . '/build/assets/frontend.css',
-		[],
+		array(),
 		$frontend_script_asset['version'],
 	);
 
 	wp_enqueue_script( 'bp-frontend-js' );
 	wp_enqueue_style( 'bp-frontend-css' );
-
 }
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\enqueue_frontend_scripts' );
 
@@ -86,16 +84,16 @@ add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\\enqueue_frontend_scripts' )
  */
 function enqueue_editor_scripts() {
 
-	$dir = dirname( __FILE__ );
-    $editor_script_asset_path = "$dir/build/assets/editor.asset.php";
+	$dir                      = __DIR__;
+	$editor_script_asset_path = "$dir/build/assets/editor.asset.php";
 
 	if ( ! file_exists( $editor_script_asset_path ) ) {
-        throw new \Error(
-            'You need to build the theme\'s assets by running `npm build`!'
-        );
-    }
+		throw new \Error(
+			'You need to build the theme\'s assets by running `npm build`!'
+		);
+	}
 
-	$editor_script_asset = require( $editor_script_asset_path );
+	$editor_script_asset = require $editor_script_asset_path;
 
 	wp_register_script(
 		'bp-editor-js',
@@ -111,14 +109,14 @@ add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\\enqueue_editor_scr
 /**
  * Help admin documentation pages.
  */
-include get_template_directory() . '/docs/help-admin-pages.php';
+require get_template_directory() . '/docs/help-admin-pages.php';
 
 /**
  * Hooks and other includes.
  *
- * include get_template_directory() . '/inc/example-include.php';
+ * E.g. require get_template_directory() . '/inc/example-include.php';
  */
-include get_template_directory() . '/inc/reset/core-block-styles.php';
-include get_template_directory() . '/inc/reset/openverse.php';
-include get_template_directory() . '/inc/register-custom-blocks.php';
-include get_template_directory() . '/inc/register-test-cpt.php';
+require get_template_directory() . '/inc/reset/core-block-styles.php';
+require get_template_directory() . '/inc/reset/openverse.php';
+require get_template_directory() . '/inc/register-custom-blocks.php';
+require get_template_directory() . '/inc/register-test-cpt.php';
